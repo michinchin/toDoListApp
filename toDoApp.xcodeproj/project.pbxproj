@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F32F5F0D2059E7C2005103FC /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32F5F0C2059E7C2005103FC /* ToDo.swift */; };
 		F32F5F10205C4921005103FC /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32F5F0F205C4921005103FC /* Section.swift */; };
 		F32F5F12205C4996005103FC /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32F5F11205C4996005103FC /* ExpandableHeaderView.swift */; };
 		F3BC4A7D2072002900A7347B /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC4A7C2072002900A7347B /* AddItemViewController.swift */; };
@@ -30,7 +29,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F32F5F0C2059E7C2005103FC /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		F32F5F0F205C4921005103FC /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		F32F5F11205C4996005103FC /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
 		F3BC4A7C2072002900A7347B /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				F3CE7CA0204659E200D73076 /* AppDelegate.swift */,
 				F3CE7CA2204659E200D73076 /* ViewController.swift */,
 				F3BC4A7C2072002900A7347B /* AddItemViewController.swift */,
-				F32F5F0C2059E7C2005103FC /* ToDo.swift */,
 				F3CE7CA4204659E200D73076 /* Main.storyboard */,
 				F3CE7CA7204659E200D73076 /* Assets.xcassets */,
 				F3CE7CA9204659E200D73076 /* LaunchScreen.storyboard */,
@@ -221,7 +218,6 @@
 			files = (
 				F32F5F10205C4921005103FC /* Section.swift in Sources */,
 				F32F5F12205C4996005103FC /* ExpandableHeaderView.swift in Sources */,
-				F32F5F0D2059E7C2005103FC /* ToDo.swift in Sources */,
 				F3CE7CA3204659E200D73076 /* ViewController.swift in Sources */,
 				F3CE7CA1204659E200D73076 /* AppDelegate.swift in Sources */,
 				F3BC4A7D2072002900A7347B /* AddItemViewController.swift in Sources */,

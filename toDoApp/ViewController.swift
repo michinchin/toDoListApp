@@ -8,21 +8,22 @@
 
 import UIKit
 
+var sections: [Section] = [
+    Section(dayOfTheWeek: "Sunday", toDos: [""], expanded: false),
+    Section(dayOfTheWeek: "Monday", toDos: [""], expanded: false),
+    Section(dayOfTheWeek: "Tuesday", toDos: [""], expanded: false),
+    Section(dayOfTheWeek: "Wednesday", toDos: [""], expanded: false),
+    Section(dayOfTheWeek: "Thursday", toDos: [""], expanded: false),
+    Section(dayOfTheWeek: "Friday", toDos: [""], expanded: false),
+    Section(dayOfTheWeek: "Saturday", toDos: [""], expanded: false),
+    
+]
+
 class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSource, ExpandableHeaderViewDelegate {
     
 
     @IBOutlet weak var tableView: UITableView!
     
-    var sections: [Section] = [
-        Section(dayOfTheWeek: "Sunday", toDos: ["hello",""], expanded: false),
-        Section(dayOfTheWeek: "Monday", toDos: ["","do"], expanded: false),
-        Section(dayOfTheWeek: "Tuesday", toDos: ["yo",""], expanded: false),
-        Section(dayOfTheWeek: "Wednesday", toDos: ["","do this"], expanded: false),
-        Section(dayOfTheWeek: "Thursday", toDos: ["","don't do this"], expanded: false),
-        Section(dayOfTheWeek: "Friday", toDos: ["","Okay"], expanded: false),
-        Section(dayOfTheWeek: "Saturday", toDos: ["","Bye"], expanded: false),
-
-    ]
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
@@ -75,6 +76,19 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         tableView.endUpdates()
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == UITableViewCellEditingStyle.delete
+        {
+            sections[indexPath.section].toDos.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,16 +99,6 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //        performSegue(withIdentifier: "dayTransition", sender: self)
-    //        print(daysOfTheWeek[indexPath.row])
-    //    }
-    
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        let destination = segue.destination as? ToDoViewController
-    //
-    //    }
 
 }
 
