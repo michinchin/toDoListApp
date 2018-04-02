@@ -15,6 +15,53 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Completed Tasks-->
+        <scene sceneID="I9s-v6-GeU">
+            <objects>
+                <viewController id="PnK-H5-5d0" customClass="CompletedTasksViewController" customModule="toDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CEd-TD-WNd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NPW-PT-GUe">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="4sd-Wa-5Cy">
+                                    <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="completedCell" id="WDq-sd-0uz">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WDq-sd-0uz" id="AVg-MG-dgy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="PnK-H5-5d0" id="71R-VB-w6c"/>
+                                    <outlet property="delegate" destination="PnK-H5-5d0" id="NtW-ql-8rH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NPW-PT-GUe" firstAttribute="leading" secondItem="Xza-Nd-3I1" secondAttribute="leading" id="5D1-yW-nlZ"/>
+                            <constraint firstItem="Xza-Nd-3I1" firstAttribute="bottom" secondItem="NPW-PT-GUe" secondAttribute="bottom" id="B1p-bm-qFf"/>
+                            <constraint firstItem="Xza-Nd-3I1" firstAttribute="trailing" secondItem="NPW-PT-GUe" secondAttribute="trailing" id="uWd-If-Ns0"/>
+                            <constraint firstItem="NPW-PT-GUe" firstAttribute="top" secondItem="Xza-Nd-3I1" secondAttribute="top" id="vHf-B1-xK7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xza-Nd-3I1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Completed Tasks" id="80u-r1-IFy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U0D-ZP-8nq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="-547"/>
+        </scene>
         <!--ToDo List-->
         <scene sceneID="D3B-Mt-BEk">
             <objects>
@@ -77,6 +124,11 @@
                         <viewLayoutGuide key="safeArea" id="ICA-ue-BLh"/>
                     </view>
                     <navigationItem key="navigationItem" title="ToDo List" id="QBL-pW-b3W" userLabel="To Do">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="ctT-gs-7LM">
+                            <connections>
+                                <segue destination="PnK-H5-5d0" kind="show" id="jKi-z9-J50"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="N6y-th-dXQ">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>

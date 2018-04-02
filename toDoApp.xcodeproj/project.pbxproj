@@ -10,6 +10,7 @@
 		F32F5F10205C4921005103FC /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32F5F0F205C4921005103FC /* Section.swift */; };
 		F32F5F12205C4996005103FC /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32F5F11205C4996005103FC /* ExpandableHeaderView.swift */; };
 		F3BC4A7D2072002900A7347B /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC4A7C2072002900A7347B /* AddItemViewController.swift */; };
+		F3BC4A7F207210D100A7347B /* CompletedTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC4A7E207210D100A7347B /* CompletedTasksViewController.swift */; };
 		F3CE7CA1204659E200D73076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE7CA0204659E200D73076 /* AppDelegate.swift */; };
 		F3CE7CA3204659E200D73076 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE7CA2204659E200D73076 /* ViewController.swift */; };
 		F3CE7CA6204659E200D73076 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CE7CA4204659E200D73076 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		F32F5F0F205C4921005103FC /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		F32F5F11205C4996005103FC /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
 		F3BC4A7C2072002900A7347B /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		F3BC4A7E207210D100A7347B /* CompletedTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasksViewController.swift; sourceTree = "<group>"; };
 		F3CE7C9D204659E200D73076 /* toDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CE7CA0204659E200D73076 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3CE7CA2204659E200D73076 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				F3CE7CA0204659E200D73076 /* AppDelegate.swift */,
 				F3CE7CA2204659E200D73076 /* ViewController.swift */,
 				F3BC4A7C2072002900A7347B /* AddItemViewController.swift */,
+				F3BC4A7E207210D100A7347B /* CompletedTasksViewController.swift */,
 				F3CE7CA4204659E200D73076 /* Main.storyboard */,
 				F3CE7CA7204659E200D73076 /* Assets.xcassets */,
 				F3CE7CA9204659E200D73076 /* LaunchScreen.storyboard */,
@@ -219,6 +222,7 @@
 				F32F5F10205C4921005103FC /* Section.swift in Sources */,
 				F32F5F12205C4996005103FC /* ExpandableHeaderView.swift in Sources */,
 				F3CE7CA3204659E200D73076 /* ViewController.swift in Sources */,
+				F3BC4A7F207210D100A7347B /* CompletedTasksViewController.swift in Sources */,
 				F3CE7CA1204659E200D73076 /* AppDelegate.swift in Sources */,
 				F3BC4A7D2072002900A7347B /* AddItemViewController.swift in Sources */,
 			);

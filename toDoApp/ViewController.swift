@@ -16,8 +16,9 @@ var sections: [Section] = [
     Section(dayOfTheWeek: "Thursday", toDos: [""], expanded: false),
     Section(dayOfTheWeek: "Friday", toDos: [""], expanded: false),
     Section(dayOfTheWeek: "Saturday", toDos: [""], expanded: false),
-    
 ]
+
+var completedTasks: [String] = []
 
 class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSource, ExpandableHeaderViewDelegate {
     
@@ -83,6 +84,20 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
             sections[indexPath.section].toDos.remove(at: indexPath.row)
             tableView.reloadData()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let todo = sections[indexPath.section].toDos[indexPath.row]
+        let action = UIContextualAction(style: .normal, title: "Check", handler:({(action,view,completion) in
+            completedTasks.append(todo)
+            sections[indexPath.section].toDos.remove(at: indexPath.row)
+            tableView.reloadData()
+            completion(true)}
+        ))
+        
+        action.backgroundColor = .green
+
+        return UISwipeActionsConfiguration(actions: [action])
     }
     
     override func viewDidAppear(_ animated: Bool) {
